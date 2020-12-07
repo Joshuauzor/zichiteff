@@ -26,7 +26,11 @@ class Requests extends Controller
 		return  redirect()->to(base_url('auth'));
         
         $RequestModel = new RequestModel();
+        $UserModel = new UsersModel();
+
         $data['totalRequest'] = $RequestModel->getAll();
+        $data['loggedInUser'] = $UserModel->getUniid($session->uniid);
+
         echo view('admin/totalReq', $data);
     }
     //--------------------------------------------------------------------
@@ -39,8 +43,12 @@ class Requests extends Controller
         return redirect()->to(base_url('auth'));
 
         $RequestModel = new RequestModel();
+        $UserModel = new UsersModel();
+
         $data['totalRequest'] = $RequestModel->getAll();
         $data['totalPending'] = $RequestModel->getPending();
+        $data['loggedInUser'] = $UserModel->getUniid($session->uniid);
+
         echo view('admin/pending', $data);
 
     }
@@ -55,8 +63,12 @@ class Requests extends Controller
         return redirect()->to(base_url('auth'));
 
         $RequestModel = new RequestModel();
+        $UserModel = new UsersModel();
+
         $data['totalRequest'] = $RequestModel->getAll();
         $data['totalInProgress'] = $RequestModel->getInProgress();
+        $data['loggedInUser'] = $UserModel->getUniid($session->uniid);
+
         echo view('admin/inProgress', $data);
 
     }
@@ -71,8 +83,12 @@ class Requests extends Controller
         return redirect()->to(base_url('auth'));
 
         $RequestModel = new RequestModel();
+        $UserModel = new UsersModel();
+
         $data['totalRequest'] = $RequestModel->getAll();
         $data['totalOnHold'] = $RequestModel->getOnhold();
+        $data['loggedInUser'] = $UserModel->getUniid($session->uniid);
+
         echo view('admin/onHold', $data);
 
     }
@@ -88,8 +104,12 @@ class Requests extends Controller
         return redirect()->to(base_url('auth'));
 
         $RequestModel = new RequestModel();
+        $UserModel = new UsersModel();
+
         $data['totalRequest'] = $RequestModel->getAll();
         $data['totalCompleted'] = $RequestModel->getCompleted();
+        $data['loggedInUser'] = $UserModel->getUniid($session->uniid);
+
         echo view('admin/completed', $data);
 
     }

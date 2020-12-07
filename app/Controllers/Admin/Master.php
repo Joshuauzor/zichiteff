@@ -26,10 +26,12 @@ class Master extends Controller
         $RequestModel = new RequestModel();
         $MasterModel = new MasterModel();
         $ServiceModel = new ServicesModel();
+        $UserModel = new UsersModel();
 
         $data['totalRequest'] = $RequestModel->getAll();
         $data['masterInfo'] = $MasterModel->getOne();
         $data['totalService'] = $ServiceModel->getAll();
+        $data['loggedInUser'] = $UserModel->getUniid($session->uniid);
 
         if(! session()->get('isLoggedIn'))
 		return  redirect()->to(base_url('auth'));
@@ -78,9 +80,11 @@ class Master extends Controller
         $session = session();
         $RequestModel = new RequestModel();
         $MasterModel = new MasterModel();
+        $UserModel = new UsersModel();
 
         $data['totalRequest'] = $RequestModel->getAll();
         $data['masterInfo'] = $MasterModel->getOne();
+        $data['loggedInUser'] = $UserModel->getUniid($session->uniid);
 
         if(! session()->get('isLoggedIn'))
 		return  redirect()->to(base_url('auth'));
@@ -125,10 +129,12 @@ class Master extends Controller
         $RequestModel = new RequestModel();
         $MasterModel = new MasterModel();
         $ServiceModel = new ServicesModel();
+        $UserModel = new UsersModel();
 
         $data['totalRequest'] = $RequestModel->getAll();
         $data['masterInfo'] = $MasterModel->getOne();
         $data['totalService'] = $ServiceModel->getAll();
+        $data['loggedInUser'] = $UserModel->getUniid($session->uniid);
 
         if(! session()->get('isLoggedIn'))
         return  redirect()->to(base_url('auth'));

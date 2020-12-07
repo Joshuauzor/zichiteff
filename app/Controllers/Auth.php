@@ -414,8 +414,7 @@ class Auth extends BaseController
             'sex' => $user->gender,
             'phone' => $user->phone,
             'isLoggedIn' => true,
-            'uniid' => $user->uniid
-
+            'uniid' => $user->uniid,
         ];
         session()->set($data);
         return true;

@@ -122,7 +122,7 @@
                                         </ul>
                                     </li>
                                     <li>
-                                        <a href="javascript:void(0)">
+                                        <a href="<?= base_url('admin/profile') ?>">
                                             <i class="metismenu-icon pe-7s-portfolio">
                                             </i>Profile
                                         </a>

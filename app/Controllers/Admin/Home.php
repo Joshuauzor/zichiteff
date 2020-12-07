@@ -37,6 +37,7 @@ class Home extends Controller
         $data['getCompleted']  = $RequestModel->getCompleted();
         $data['getRecentReq'] =  $RequestModel->getRecentReq();
         $data['totalUsers'] =  $UserModel->getAll();
+        $data['loggedInUser'] = $UserModel->getUniid($session->uniid);
 
         echo view('admin/dashboard', $data);
     }

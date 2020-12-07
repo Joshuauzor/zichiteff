@@ -1,0 +1,115 @@
+<html>
+  <head>
+    <title>PROFILE</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta charset="utf-8">
+   <!--  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Language" content="en"> -->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+     <link href="../main.css" rel="stylesheet" type="text/css">
+    <link href="style.css" rel="stylesheet" type="text/css">
+  </head>
+
+
+  <body>
+
+    <div class="profile">
+
+      <div class="cover-photo-div">
+            <div class="cover-photo">
+
+            </div>
+         </div>
+
+      <div class="content">
+
+        <div class="edit-butt-div">
+          <button class="btn btn-primary">EDIT PROFILE</button>
+        </div>
+
+         <div class="profile-wrapper">
+
+           <div class="profile-pic">
+               <img src="psalms2.jpg">
+               <div id="change">
+                 <input type="file" style="display:none">
+               </div>
+           </div>
+
+         </div>
+
+         <div class="about-div">
+
+            <div class="bio">
+                 <h1><span id="p-firstname">Psalm</span> <span id="p-lastname">Webb</span></h1>
+                 <p><i class="pe-7s-mail"></i><span id="p-email">PSALMYWEB@GMAIL.COM</span></p>
+                 <p><i class="pe-7s-call"></i><span id="p-phone">+234-903-647-5328</span></p>
+                 <p><i class="pe-7s-signal"></i><span  id="p-locate">Ottawa, Canada</span></p>
+                 <p><i class="pe-7s-date"></i>Joined August 2019</p>
+            </div>
+
+            <div class="about-me">
+              <b>About Me</b>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              </p>
+            </div>
+         </div>
+
+      </div>
+
+
+      <form class="profile-form">
+
+          <div>
+            <label>First Name</label>
+            <input type="text" name="firstname" required >
+          </div>
+
+          <div>
+            <label>Last Name</label>
+            <input type="text" name="lastname" required>
+          </div>
+
+          <div>
+            <span>Gender : </span>
+            <span>Male:</span> <input type="radio"name="gender">
+            <span>Female:</span> <input type="radio"  name="gender">
+          </div>
+
+          <div>
+            <label>Email</label>
+            <input type="email" name="email" required>
+          </div>
+
+           <div>
+            <label>Phone Number</label>
+            <input type="number"  name="phone" required>
+          </div>
+
+           <div>
+            <label>Password</label>
+            <input type="password" name="password"  required>
+               <span>Password Strength</span> : <span id="pass-status">Very Weak</span>
+               <div class="loader-div">
+                   <div class="loader"></div>
+               </div>
+          </div>
+
+          <div>
+            <button type="submit">DONE</button>
+          </div>
+      </form>
+
+
+
+    </div>
+
+    <script src="profile.js"></script>
+  </body>
+</html>

@@ -13,6 +13,7 @@
                 </div>
             <?php endif ?>
             <!-- error message ends -->
+            
             <style>
                  .errors li{
                     list-style-type: none;

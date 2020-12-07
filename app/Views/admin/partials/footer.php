@@ -112,7 +112,7 @@
             // EVERY TIME A USER TYPES, THIS FUNCTION WILL BE FIRED.... :)
             filter.onkeyup =()=> search();
 
-            // 
+            // Set time for validation message to clear 
             $(document).ready(function(){
 				setTimeout(function(){
 					$('.hide').hide()

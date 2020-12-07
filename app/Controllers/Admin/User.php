@@ -29,6 +29,7 @@ class User extends Controller
         $data['totalRequest'] = $RequestModel->getAll();
         $data['masterInfo'] = $MasterModel->getOne();
         $data['AllUsers'] = $UserModel->getAll();
+        $data['loggedInUser'] = $UserModel->getUniid($session->uniid);
 
         if(! session()->get('isLoggedIn'))
         return  redirect()->to(base_url('auth'));

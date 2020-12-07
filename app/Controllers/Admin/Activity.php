@@ -30,6 +30,7 @@ class Activity extends Controller
 
         $data['totalRequest'] = $RequestModel->getAll();
         $data['loginactivity'] = $UserModel->getloginActivity($session->uniid);
+        $data['loggedInUser'] = $UserModel->getUniid($session->uniid);
 
         echo view('admin/activity', $data);
     }
