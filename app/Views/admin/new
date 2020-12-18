@@ -1,0 +1,114 @@
+<?php echo view('admin/partials/head')?>
+<?php echo view('admin/partials/header')?>
+<?php echo view('admin/partials/themesettings')?>
+<?php echo view('admin/partials/navbar')?>
+<link href="<?= base_url('public/admin/profile/profile.css')?>" rel="stylesheet" type="text/css">
+<body>
+    <div class="container-fluid position-relative">
+
+        <div class="col-12 bg-white pb-3">
+        <div class="cover-div position-relative">
+            <div class="cover-photo position-absolute"></div>
+        </div>
+        </div>
+
+        <div class="row content">
+        <div class="profile-div d-flex flex-wrap">
+
+            <div class="profile-pic col-md-4 d-flex">
+            <div class="profile-pic-img img-fluid position-relative">
+            <img src="<?= base_url('public/profile/icon-avatar.png')?>" class="img-fluid rounded-circle img-thumbnail">
+            <img src="<?= base_url('public/profile/upload.png')?>" class="position-absolute upload">
+            </div>
+            </div>
+
+            <div class="profile-eng col-md-8 d-flex flex-wrap">
+            <div class="profile-name p-3 col-md-6 col-sm-6 col-xs-12 font-weight-bold d-flex align-items-md-center justify-content-md-center">
+                PSALM WEB
+            </div>
+            <div class="profile-btn col-md-6 d-flex col-sm-6 col-xs-12 justify-content-end align-items-center">
+                <button class="btn btn-secondary btn-sm" onclick="profileForm.style.display='block'">EDIT PROFILE</button>
+            </div>
+            </div>
+
+        </div>
+        </div>
+
+        <div class="row">
+        <div class="about-section d-flex flex-wrap">
+            <div class="about-me p-4 col-md-6 col-sm-12">
+            <p><i class="fas fa-user"></i> Psalmyweb@gmail.com</p>
+            <p><i class="fas fa-phone-alt"></i> 09036475328</p>
+            <p><i class="fas fa-map-marker-alt"></i> Nigeria</p>
+            <p> <i class="fas fa-calendar-alt"></i> Joined Friday 13 Nov 2020</p>
+            </div>
+            <div class="about p-4 col-md-6 col-sm-12 bg-dark text-light">
+            <h2>About Me</h2>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            Distinctio atque quod totam praesentium nobis illum voluptates saepe consequuntur amet 
+            nulla esse delenitiinventore ducimus, voluptatem quibusdam reprehenderit officiis quas officia?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit in, magnam voluptatibus exercitationem 
+            odio nulla, amet beatae officia consectetur,dignissimos harum qui unde architecto expedita quia praesentium doloribus ad hic!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            Distinctio atque quod totam praesentium nobis illum voluptates saepe consequuntur amet 
+            nulla esse delenitiinventore ducimus, voluptatem quibusdam reprehenderit officiis quas officia?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit in, magnam voluptatibus exercitationem 
+            odio nulla, amet beatae officia consectetur,dignissimos harum qui unde architecto expedita quia praesentium doloribus ad hic!
+            </div>
+        </div>
+        </div>
+
+        <div class="profile-form border col-md-12 p-4 position-absolute" id="profileForm">
+        <div class="col-md-6 offset-md-3 col-sm-8 offset-sm-2 col-xs-12">
+            <div class="form-group">
+            <label class="form-label">First Name</label>
+            <input type="text" class="form-control">
+            </div>
+            <div class="form-group">
+                <label class="form-label">Last Name</label>
+                <input type="text" class="form-control">
+            </div>
+            <div class="form-group">
+            <label for="Gender" class="form-label">Gender</label> :
+            <input type="radio" name="gender"> <label>Male</label>
+            <input type="radio" name="gender"> <label>Female</label>
+            </div>
+            <div class="form-group">
+                <label class="form-label">Email</label>
+                <input type="text" class="form-control">
+            </div>
+            <div class="form-group">
+                <label class="form-label">Phone Number</label>
+                <input type="text" class="form-control">
+            </div>
+            <div class="form-group">
+                <label class="form-label">Password</label>
+                <input type="password" class="form-control">
+            </div>
+
+            <div class="form-group" id="pass-val">
+            <ul>
+            <li>Password should be longer than six <i></i></li>
+            <li>Password should contain special characters <i></i></li>
+            <li>Password Should contain uppercase letters <i></i></li>
+            </ul>
+            </div>
+            <div class="form-group">
+                <button class="btn btn-outline-danger" onclick="profileForm.style.display='none'">CANCEL</button>
+                <button class="btn btn-outline-secondary float-right">DONE</button>
+            </div>
+        </div>
+        </div>
+
+
+        <div class="design position-absolute bg-dark">
+        
+        </div>
+        
+    </div>
+<!-- profile script -->
+  <script src="<?= base_url('public/admin/profile/profile.js')?>"></script>  
+</body>
+
+
+</html>

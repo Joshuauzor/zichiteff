@@ -187,7 +187,7 @@
         </div>
         </form>
         <p class="mb-3 p-3" style="margin: -3% auto 0 auto;">
-            <a href="<?= base_url('auth') ?>" class="text-center">Already have an account?</a>
+            <a href="<?= base_url('admin/home') ?>" class="text-center">Return to Dashbaord?</a>
         </p>
     </div>
     <!-- /.card-body -->

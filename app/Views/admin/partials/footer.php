@@ -31,6 +31,9 @@
                     <script src="http://maps.google.com/maps/api/js?sensor=true"></script>
             </div>
         </div>
+        <!-- profile script -->
+        <script type="text/javascript" src="<?= base_url('public/admin/profile/profile.js')?>"></script>
+        <!--  -->
         <script type="text/javascript" src="<?= base_url('public/admin/assets/scripts/main.js')?>"></script>
         <!-- ajax script for status action -->
         <script>
@@ -39,7 +42,7 @@
                 $('.request').DataTable();
                 // end here
 
-            // second function
+            // second function to change request status
             $('.status_act').on('change', function(){
                     var action = $(this).val();
                     var id = $(this).attr('extra-id');
@@ -119,15 +122,64 @@
 				}, 5000);
 			})
         </script>
-
-       	<!-- validation timeout -->
-		<script>
-			// $(document).ready(function(){
-			// 	setTimeout(function(){
-			// 		$('.hide').hide()
-			// 	}, 6000);
-			// })
-		</script>
+            <!-- trigger for profile page -->
+            <script>
+                $('#change').on('click', function(){
+                    $('input[type=file]').click()
+                })
+            </script>
+            <!-- ends here -->
+       	   <!-- form submission ajax for profile pics -->
+        <script>
+            $(document).ready(function(){
+                $('#pro_pics').on('change', function(){
+                    // alert('hello')
+                    var avatar = new FormData(document.getElementById("fileinfo"));
+                    
+                    $.ajax({
+                        url:"<?= base_url()?>/admin/profile/upload",
+                        type:"POST",
+                        // add when dealing with a file
+                        enctype: 'multipart/form-data',
+                        cache: false,
+                        contentType: false,
+                        processData: false,
+                        // end. 
+                        data: avatar,
+                        dataType: 'json',
+                        success: function(response){
+                            console.log(response)
+                            if(response == 'success'){
+                                // location.reload()
+                                $('#showProSUC').css('display', 'block');
+                                $('#showProSUC').html(response);
+                                setTimeout(function(){
+                                    $('#showProSUC').hide();
+                                }, 5000);
+                                location.reload();
+                            }
+                            else{
+                                if(response == 'error'){
+                                    $('#showProERR').css('display', 'block');
+                                    $('#showProERR').html(response);
+                                    setTimeout(function(){
+                                        $('#showProERR').hide();
+                                    }, 5000);
+                                }
+                                else{
+                                    alert("Something went wrong");
+                                }
+                            }    
+                        },
+                        error: function(jqXHR, textStatus, errorThrown){
+                            alert("Error: Status: "+textStatus+"Message: "+errorThrown);
+                            // console.warn(jqxhr.responseText)
+                        }
+                    })
+                })
+            })
+        </script>
+        <!-- ends here -->
 	<!-- validation timeout -->
     </body>
 

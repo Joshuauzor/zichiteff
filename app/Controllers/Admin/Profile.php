@@ -42,7 +42,7 @@ class Profile extends Controller
     }
 
     //--------------------------------------------------------------------
-
+    // used with AJAX
     public function upload(){
         $data['title'] = 'Profile | Zichiteff';
         $session = session();
@@ -70,7 +70,7 @@ class Profile extends Controller
                 $file = $this->request->getFile('avatar');
                 if($file->isValid() && !$file->hasMoved()){
                     //provide random name for file to avoid clash
-                    if($file->move(FCPATH.'public\avatar', $file->getRandomName())){
+                    if($file->move(FCPATH.'public/avatar', $file->getRandomName())){
                         $path = base_url().'/public/avatar/'.$file->getName();
                         // insert into db
                         $data = [
@@ -103,6 +103,59 @@ class Profile extends Controller
                 // return redirect()->to(base_url('admin/profile'));
                 echo json_encode('error');
             }
+        }
+    }
+
+    public function updateProfile(){
+        $data['title'] = 'Profile | Zichiteff';
+        $session = session();
+        $RequestModel = new RequestModel();
+        $MasterModel = new MasterModel();
+        $ServiceModel = new ServicesModel();
+        $UserModel = new UsersModel();
+
+        $data['totalRequest'] = $RequestModel->getAll();
+        $data['masterInfo'] = $MasterModel->getOne();
+        $data['totalService'] = $ServiceModel->getAll();
+        $data['loggedInUser'] = $UserModel->getUniid($session->uniid);
+        // var_dump($data['loggedInUser']); die;
+
+        if(! session()->get('isLoggedIn'))
+        return  redirect()->to(base_url('auth'));
+        // var_dump($this->request->getPost()); die;
+        if($this->request->getMethod() == 'post'){
+            // validate form
+            $rules = [
+                // user info validation
+				'firstname' => 'required|trim',
+				'lastname' => 'required|trim',
+                'gender' => 'required|trim',
+				'phone' => 'required|trim|min_length[8]|numeric',
+            ];
+
+            if($this->validate($rules)){
+                $UserModel = new UsersModel();
+
+                $data = [
+                    'firstname' => $_POST['firstname'],
+                    'lastname' => $_POST['lastname'],
+                    'gender' => $_POST['gender'],
+                    'phone' => $_POST['phone'],
+                ];
+                // var_dump($session->uniid); die;
+                if($UserModel->updateUser($session->uniid, $data)){
+                    $session->setFlashdata('success', 'Profile Updated!');
+                    return redirect()->to(base_url('admin/profile'));
+                }
+                else{
+                    $session->setFlashdata('error', 'Unable to update profile at the moment!');
+                    return redirect()->to(base_url('admin/profile'));
+                }
+            }
+        }
+        else{
+            $data['validation'] = $this->validator;
+            return redirect()->to(base_url('admin/profile'));
         }
     }
 }
