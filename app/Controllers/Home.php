@@ -45,8 +45,11 @@ class Home extends BaseController
 		$data['title'] = 'Services | Zichiteff';
 		$MasterModel = new MasterModel();
 		$RequestModel = new RequestModel();
+		$ServiceModel = new ServicesModel();
+
         $data['totalRequest'] = $RequestModel->getAll();
-        $data['masterInfo'] = $MasterModel->getOne();
+		$data['masterInfo'] = $MasterModel->getOne();
+		$data['totalServices'] = $ServiceModel->getAll();	
 		echo view ('homepage/services', $data);
 	}
 

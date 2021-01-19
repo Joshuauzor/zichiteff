@@ -12,27 +12,27 @@
 					<div class="carousel-testimony owl-carousel ftco-owl">
 						<div class="item">
 							<div class="testimony-wrap py-4 pb-5 d-flex justify-content-between align-items-end">
-								<div class="user-img" style="background-image: url(<?= base_url('public/images/person_1.jpg')?>)">
+								<div class="user-img" style="background-image: url(<?= base_url('public/images/client.jpg')?>)">
 									<span class="quote d-flex align-items-center justify-content-center">
 										<i class="fa fa-quote-left"></i>
 									</span>
 								</div>
 								<div class="text">
 									<p class="mb-4">I was searching for a company I could work with for the distribution of my paint for industrial use until I came in touch with Zichitef. Thank you</p>
-									<p class="name">Joshua Uzor</p>
+									<p class="name">Nduka Okpechi</p>
 									<span class="position">Client</span>
 								</div>
 							</div>
 						</div>
 						<div class="item">
 							<div class="testimony-wrap py-4 pb-5 d-flex justify-content-between align-items-end">
-								<div class="user-img" style="background-image: url(<?= base_url('public/images/person_2.jpg')?>)">
+								<div class="user-img" style="background-image: url(<?= base_url('public/images/ezinne.jpg')?>)">
 									<span class="quote d-flex align-items-center justify-content-center">
 										<i class="fa fa-quote-left"></i>
 									</span>
 								</div>
 								<div class="text">
-									<p class="mb-4">Getting trusted property wouldn't have been this easy without Zichiteff</p>
+									<p class="mb-4">That one stop shop for your property needs</p>
 									<p class="name">Ezinne Ikejiani</p>
 									<span class="position">CEO</span>
 								</div>

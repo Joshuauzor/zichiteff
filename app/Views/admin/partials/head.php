@@ -10,6 +10,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no" />
         <meta name="description" content="Zichiteff Application">
         <meta name="msapplication-tap-highlight" content="no">
+        <!-- Favicon -->
+	    <link href="<?= base_url('public/images/favicon.jpg')?>" rel="shortcut icon"/>
+        <!-- styles -->
         <link href="<?= base_url('public/admin/main.css')?>" rel="stylesheet">
         <!-- <link href="<?= base_url('public/profile/style.css')?>" rel="stylesheet" type="text/css"> -->
         <!-- datatable css -->

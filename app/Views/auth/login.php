@@ -85,4 +85,17 @@
     <!-- /.card -->
 </div>
 <!-- /.login-box -->
+
+<!-- styles for making it responsive -->
+<style>
+@media(min-width:320px) and (max-width: 550px){
+    .login-box{
+        width: 380px;
+    }
+    .icheck-primary{
+        font-size: small;
+    }
+}
+
+</style>
 <?php echo view('auth/fragments/footer'); ?>

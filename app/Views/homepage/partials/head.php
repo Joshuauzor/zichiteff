@@ -22,4 +22,7 @@
     <link rel="stylesheet" href="<?= base_url('public/css/style.css')?>">
     
     <!-- add favicon -->
+	<!-- Favicon -->
+	<link href="<?= base_url('public/images/favicon.jpg')?>" rel="shortcut icon"/>
+    
 </head>

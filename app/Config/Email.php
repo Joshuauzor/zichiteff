@@ -61,7 +61,7 @@ class Email extends BaseConfig
 	 *
 	 * @var string
 	 */
-	public $SMTPPass = 'Joshua****';
+	public $SMTPPass = 'Zealtechnologies20';
 
 	/**
 	 * SMTP Port

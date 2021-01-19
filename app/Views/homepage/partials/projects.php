@@ -9,7 +9,7 @@
 			<div class="row">
 				<div class="col-md-4">
 					<div class="project">
-						<a href="images/project-1.jpg" class="img image-popup d-flex align-items-center" style="background-image: url(<?= base_url('public/images/project-1.jpg')?>);">
+						<a href="<?= base_url('public/images/paint.jpg')?>" class="img image-popup d-flex align-items-center" style="background-image: url(<?= base_url('public/images/paint.jpg')?>);">
 							<div class="icon d-flex align-items-center justify-content-center mb-5"><span class="fa fa-plus"></span></div>
 						</a>
 						<div class="text">
@@ -21,7 +21,7 @@
 				</div>
 				<div class="col-md-4">
 					<div class="project">
-						<a href="images/project-1.jpg" class="img image-popup d-flex align-items-center" style="background-image: url(<?= base_url('public/images/project-1.jpg')?>);">
+						<a href="<?= base_url('public/images/land.jpg')?>" class="img image-popup d-flex align-items-center" style="background-image: url(<?= base_url('public/images/land.jpg')?>);">
 							<div class="icon d-flex align-items-center justify-content-center mb-5"><span class="fa fa-plus"></span></div>
 						</a>
 						<div class="text">
@@ -33,13 +33,13 @@
 				</div>
 				<div class="col-md-4">
 					<div class="project">
-						<a href="images/project-1.jpg" class="img image-popup d-flex align-items-center" style="background-image: url(<?= base_url('public/images/project-1.jpg')?>);">
+						<a href="<?= base_url('public/images/project-1.jpg')?>" class="img image-popup d-flex align-items-center" style="background-image: url(<?= base_url('public/images/project-1.jpg')?>);">
 							<div class="icon d-flex align-items-center justify-content-center mb-5"><span class="fa fa-plus"></span></div>
 						</a>
 						<div class="text">
 							<span class="subheading">Building</span>
 							<h3>Building A Condominium</h3>
-							<p><span class="fa fa-map-marker mr-1"></span> Ota, Ogun, NIGERIA</p>
+							<p><span class="fa fa-map-marker mr-1"></span> Lagos, NIGERIA</p>
 						</div>
 					</div>
 				</div>
