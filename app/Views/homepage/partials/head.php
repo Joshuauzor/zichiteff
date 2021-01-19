@@ -24,5 +24,6 @@
     <!-- add favicon -->
 	<!-- Favicon -->
 	<link href="<?= base_url('public/images/favicon.jpg')?>" rel="shortcut icon"/>
-    
+    <!-- google search console -->
+	<meta name="google-site-verification" content="hUwnPeCvnrDJ8yBSQLs8_oRZokaxbn_1vcrKc00vPAg" />
 </head>
